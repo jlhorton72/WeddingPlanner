@@ -4,7 +4,7 @@
  * Assignment:  Wedding Planner Exam 1
  * File:        Guest.java
  */
-//package weddingplannerapp;
+package weddingplannerapp;
 import java.time.LocalDate;
 /**
  *
@@ -21,9 +21,9 @@ public class Guest
        return thedate;
    } // end of now  
 
-    public Guest(String inName)            
+    public Guest(String fname, String lName)            
     {
-        this.guest = new Person(inName);
+        this.guest = new Person(fname, lName);
         this.date = now();     
     } // end of Guest
     

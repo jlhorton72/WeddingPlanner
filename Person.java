@@ -4,7 +4,7 @@
  * Assignment:  Wedding Planner Exam 1
  * File:        Person.java
  */
-//package weddingplannerapp;
+package weddingplannerapp;
 
 /**
  *
@@ -12,15 +12,18 @@
  */
 public class Person 
 {
-    private String name;
+    private String fname;
+    private String lname;
         
-    public Person(String inNname)
+    public Person(String inNname, String lNm)
     {
-        this.name = inNname;
+        this.fname = inNname;
+        this.lname = lNm;
     } // end of Person
     
     public String getName()
     {
+        String name = fname + " " + lname;
         return name;
     } // end of getName
     

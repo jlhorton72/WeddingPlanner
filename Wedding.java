@@ -4,7 +4,7 @@
  * Assignment:  Wedding Planner Exam 1
  * File:        Wedding.java
  */
-//package weddingplannerapp;
+package weddingplannerapp;
 import java.util.ArrayList;
 import java.time.LocalDate;
 /**
@@ -18,14 +18,17 @@ public class Wedding
     LocalDate dte;
     public String location;    
     
-    public Wedding(String bride, String groom, String local, LocalDate indate, ArrayList<String> theList)
+    public Wedding(String fnmBride, String lnmBride, String fnmGroom, String lnmGroom, String local, LocalDate indate, ArrayList<String> theList)
     {
-        this.cple = new Couple(bride, groom);
+        this.cple = new Couple(fnmBride, lnmBride, fnmGroom, lnmGroom);
         this.location = local;
         this.dte = indate; 
         for (String party: theList)
         {
-            Guests.add(new Guest(party));
+            String[] gstsplit = party.trim().split("\\s+");
+            String gstFn = gstsplit[0];
+            String gstLn = gstsplit[1];
+            Guests.add(new Guest(gstFn, gstLn));
         }
     } // end of Wedding
     
